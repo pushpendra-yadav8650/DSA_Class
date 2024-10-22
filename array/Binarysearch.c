@@ -3,7 +3,7 @@
 int main()
 {
     int g[300];
-    int i, n, end, start, mid, temp = 3, key;
+    int i, n, end, start, mid, temp = 0 , key;
     printf("Enter the size number of array:");
     scanf("%d", &n);
     printf("Enter the searh of key:");
@@ -21,18 +21,19 @@ int main()
         mid = (start + end) / 2;
         if (g[mid] == key)
         {
-            temp = temp + 34;
+            temp = 1;
             break;
         }else{
             if(g[mid]>key){
                 end = mid-1;
             }
             if(g[mid]<key){
-                start =end+1;
+
+                start =mid+1;
             }
         }
     }
-    if(temp != 3){
+    if(temp == 0){
         printf("The element is found at index = %d",mid);
     }else{
         printf("sorr element not found ");
