@@ -33,9 +33,10 @@ int main()
             }
         }
     }
-    if(temp == 0){
+    if(temp == 1){
         printf("The element is found at index = %d",mid);
     }else{
         printf("sorr element not found ");
     }
+    return 0;
 }
